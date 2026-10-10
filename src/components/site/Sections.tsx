@@ -12,7 +12,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <p className="eyebrow">Direito do Trabalho</p>
           <h1 className="mt-6 text-5xl leading-[1.05] text-foreground md:text-7xl">
-            Advocacia Trabalhista com seriedade e compromisso
+            Orientação juridica para direito no trabalho
           </h1>
           <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
             Atendimento atencioso e orientação jurídica clara para quem busca compreender e
