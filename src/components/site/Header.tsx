@@ -9,8 +9,9 @@ export function Header() {
   return (
     <header className="panel-green panel-green-glass fixed inset-x-0 top-0 z-50 border-b border-border backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <a href="#inicio" className="font-display text-xl tracking-wide text-foreground">
-          {site.nomeEscritorio}
+        <a href="#inicio" className="flex items-center gap-3 font-display text-xl tracking-wide text-foreground">
+          <img src="/images/logo.png" alt="" width={130} height={97} className="h-10 w-auto rounded-sm bg-white/90 p-1" />
+          <span>{site.nomeEscritorio}</span>
         </a>
         <nav aria-label="Principal" className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
