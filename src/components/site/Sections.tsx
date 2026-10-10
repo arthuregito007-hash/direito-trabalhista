@@ -80,9 +80,23 @@ export function Sobre() {
   return (
     <section id="sobre" className="panel-green py-24">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-        <div className="flex aspect-[4/5] items-center justify-center border border-dashed border-brand-foreground/40 bg-brand">
+        <div
+          className={cn(
+            "aspect-[4/5] overflow-hidden",
+            a.fotoUrl
+              ? "bg-background p-3 ring-1 ring-brand-foreground/25 md:p-5"
+              : "flex items-center justify-center border border-dashed border-brand-foreground/40 bg-brand",
+          )}
+        >
           {a.fotoUrl ? (
-            <img src={a.fotoUrl} alt={`Foto de ${a.nome}`} className="h-full w-full object-cover" loading="lazy" />
+            <img
+              src={a.fotoUrl}
+              alt={`Foto de ${a.nome}`}
+              width={864}
+              height={1184}
+              className="h-full w-full object-cover object-top"
+              loading="lazy"
+            />
           ) : (
             <div className="text-center text-muted-foreground">
               <User className="mx-auto h-12 w-12" strokeWidth={1} aria-hidden />
