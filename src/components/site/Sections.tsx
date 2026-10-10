@@ -1,4 +1,4 @@
-import { Banknote, Clock, FileSignature, PiggyBank, ShieldAlert, Scale, Phone, Mail, MapPin, MessageCircle, User } from "lucide-react";
+import { Banknote, Clock, FileSignature, PiggyBank, ShieldAlert, Scale, Phone, Mail, MessageCircle, User } from "lucide-react";
 import escritorio from "@/assets/escritorio.jpg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -143,7 +143,7 @@ export function Contato() {
     { icon: MessageCircle, label: "WhatsApp", value: c.whatsapp ? `+${c.whatsapp}` : "[Número de WhatsApp — provisório]" },
     { icon: Phone, label: "Telefone", value: c.telefone },
     { icon: Mail, label: "E-mail", value: c.email },
-    { icon: MapPin, label: "Endereço", value: c.endereco },
+
   ];
   return (
     <section id="contato" className="panel-green py-24">
