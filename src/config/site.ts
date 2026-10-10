@@ -18,7 +18,7 @@ export const site = {
     whatsapp: "5521987833246",
     telefone: "(21) 98783-3246",
     email: "advocaciaegito@gmail.com",
-    mensagemWhatsapp: "Olá! Gostaria de agendar um atendimento.",
+    mensagemWhatsapp: "Ola! gostaria de tirar uma duvida.",
   },
 };
 
