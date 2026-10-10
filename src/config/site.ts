@@ -1,4 +1,4 @@
-import fotoAdvogado from "@/assets/terno_azul.png.asset.json";
+import fotoAdvogado from "@/assets/terno_azul_recorte.png";
 
 /**
  * DADOS DO ESCRITÓRIO — edite aqui as informações reais.
