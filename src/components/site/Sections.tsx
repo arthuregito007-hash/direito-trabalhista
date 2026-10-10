@@ -7,7 +7,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden pt-16">
+    <section id="inicio" className="panel-green relative overflow-hidden pt-16">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-28">
         <div className="animate-fade-up">
           <p className="eyebrow">Direito do Trabalho</p>
@@ -19,12 +19,12 @@ export function Hero() {
             defender seus direitos nas relações de trabalho.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a className={cn(buttonVariants({size: "lg"}), "rounded-sm px-8")} href="#contato">Fale conosco</a>
+            <a className={cn(buttonVariants({variant: "secondary", size: "lg"}), "rounded-sm px-8")} href="#contato">Fale conosco</a>
             <a className={cn(buttonVariants({variant: "ghost", size: "lg"}), "rounded-sm text-muted-foreground hover:text-foreground")} href="#atuacao">Áreas de atuação</a>
           </div>
         </div>
         <div className="relative animate-fade-up [animation-delay:200ms]">
-          <div className="absolute -left-4 -top-4 h-24 w-24 border-l border-t border-brand/60" aria-hidden />
+          <div className="absolute -left-4 -top-4 h-24 w-24 border-l border-t border-brand-foreground/60" aria-hidden />
           <img
             src={escritorio}
             alt="Ambiente de escritório jurídico com livros e luminária"
@@ -49,7 +49,7 @@ const areas = [
 
 export function Atuacao() {
   return (
-    <section id="atuacao" className="panel-green py-24">
+    <section id="atuacao" className="py-24">
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading
           eyebrow="Áreas de atuação"
@@ -58,8 +58,8 @@ export function Atuacao() {
         />
         <div className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {areas.map(({ icon: Icon, title, text }) => (
-            <article key={title} className="group bg-brand p-8 transition-colors hover:bg-secondary">
-              <Icon className="h-6 w-6 text-brand-foreground/85" strokeWidth={1.4} aria-hidden />
+            <article key={title} className="group bg-background p-8 transition-colors hover:bg-secondary">
+              <Icon className="h-6 w-6 text-brand" strokeWidth={1.4} aria-hidden />
               <h3 className="mt-6 text-2xl text-foreground">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
             </article>
@@ -78,9 +78,9 @@ export function Sobre() {
     { label: "Inscrição", value: a.oab },
   ];
   return (
-    <section id="sobre" className="py-24">
+    <section id="sobre" className="panel-green py-24">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-        <div className="flex aspect-[4/5] items-center justify-center border border-dashed border-brand/40 bg-muted">
+        <div className="flex aspect-[4/5] items-center justify-center border border-dashed border-brand-foreground/40 bg-brand">
           {a.fotoUrl ? (
             <img src={a.fotoUrl} alt={`Foto de ${a.nome}`} className="h-full w-full object-cover" loading="lazy" />
           ) : (
@@ -121,13 +121,13 @@ const etapas = [
 
 export function Atendimento() {
   return (
-    <section id="atendimento" className="panel-green py-24">
+    <section id="atendimento" className="py-24">
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading eyebrow="Atendimento" title="Como funciona" />
         <ol className="mt-14 grid gap-10 md:grid-cols-4">
           {etapas.map((e, i) => (
-            <li key={e.title} className="border-t border-brand-foreground/40 pt-6">
-              <span className="font-display text-4xl text-brand-foreground/80">{String(i + 1).padStart(2, "0")}</span>
+            <li key={e.title} className="border-t border-brand/50 pt-6">
+              <span className="font-display text-4xl text-brand">{String(i + 1).padStart(2, "0")}</span>
               <h3 className="mt-4 text-2xl text-foreground">{e.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{e.text}</p>
             </li>
@@ -147,7 +147,7 @@ export function Contato() {
     { icon: MapPin, label: "Endereço", value: c.endereco },
   ];
   return (
-    <section id="contato" className="py-24">
+    <section id="contato" className="panel-green py-24">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-2">
         <div>
           <SectionHeading
@@ -155,14 +155,14 @@ export function Contato() {
             title="Fale conosco"
             intro="Entre em contato para agendar um atendimento. Responderemos assim que possível."
           />
-          <a className={cn(buttonVariants({size: "lg"}), "mt-10 rounded-sm px-8")} href={whatsappLink()} target={c.whatsapp ? "_blank" : undefined} rel="noopener noreferrer">
+          <a className={cn(buttonVariants({variant: "secondary", size: "lg"}), "mt-10 rounded-sm px-8")} href={whatsappLink()} target={c.whatsapp ? "_blank" : undefined} rel="noopener noreferrer">
               <MessageCircle aria-hidden /> Conversar pelo WhatsApp
             </a>
         </div>
         <ul className="divide-y divide-border border-y border-border">
           {itens.map(({ icon: Icon, label, value }) => (
             <li key={label} className="flex items-start gap-5 py-6">
-              <Icon className="mt-1 h-5 w-5 shrink-0 text-brand" strokeWidth={1.4} aria-hidden />
+              <Icon className="mt-1 h-5 w-5 shrink-0 text-brand-foreground/85" strokeWidth={1.4} aria-hidden />
               <div className="min-w-0">
                 <p className="eyebrow">{label}</p>
                 <p className="mt-1 break-words text-foreground">{value}</p>
@@ -177,7 +177,7 @@ export function Contato() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border panel-green">
+    <footer className="border-t border-border py-2">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-display text-2xl text-foreground">{site.nomeEscritorio}</p>
