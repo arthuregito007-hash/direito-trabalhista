@@ -8,7 +8,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="panel-green panel-green-glass fixed inset-x-0 top-0 z-50 border-b border-border backdrop-blur-md">
-      <div className="mx-auto grid h-16 max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-5">
+      <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
         <div className="flex items-center">
           <button
             className="md:hidden text-foreground"
@@ -26,7 +26,7 @@ export function Header() {
             ))}
           </nav>
         </div>
-        <a href="#inicio" className="flex items-center justify-center">
+        <a href="#inicio" className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <img src="/images/logo.png" alt={site.nomeEscritorio} width={72} height={97} className="h-12 w-auto" />
         </a>
         <div className="flex items-center justify-end">

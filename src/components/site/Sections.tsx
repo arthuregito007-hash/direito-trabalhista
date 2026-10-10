@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { navLinks, site, whatsappLink } from "@/config/site";
 import { SectionHeading } from "./SectionHeading";
+import { RevealText } from "./RevealText";
 
 export function Hero() {
   return (
@@ -12,7 +13,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <p className="eyebrow">Direito do Trabalho</p>
           <h1 className="mt-6 text-5xl leading-[1.05] text-foreground md:text-7xl">
-            Orientação juridica para direito no trabalho
+            <RevealText text="Orientação jurídica para direito no trabalho" />
           </h1>
           <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
             Atendimento atencioso e orientação jurídica clara para quem busca compreender e
