@@ -8,7 +8,7 @@ export const site = {
   nomeEscritorio: "Advocacia Trabalhista",
   advogado: {
     nome: "DR. Sérgio Egito",
-    oab: "OAB/UF nº [000.000 — provisório]",
+    oab: "OAB/RJ nº 201.123",
     formacao: "[Formação acadêmica — provisório]",
     experiencia: "[Experiência profissional — provisório]",
     fotoUrl: fotoAdvogado, // URL da foto profissional; vazio mostra um espaço reservado
