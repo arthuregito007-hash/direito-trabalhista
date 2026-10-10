@@ -72,11 +72,6 @@ export function Atuacao() {
 
 export function Sobre() {
   const a = site.advogado;
-  const campos = [
-    { label: "Formação", value: a.formacao },
-    { label: "Experiência", value: a.experiencia },
-    { label: "Inscrição", value: a.oab },
-  ];
   return (
     <section id="sobre" className="panel-green py-24">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[0.8fr_1.2fr] md:items-center">
@@ -106,20 +101,10 @@ export function Sobre() {
         </div>
         <div>
           <SectionHeading eyebrow="Sobre o advogado" title={a.nome} />
-          <span className="placeholder-tag mt-6">Texto provisório</span>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            [Texto provisório] Espaço destinado a uma breve apresentação do advogado responsável,
-            sua trajetória e a forma como conduz o atendimento aos clientes. Substitua este
-            parágrafo pelas informações reais.
+          <p className="mt-6 leading-relaxed text-muted-foreground">
+            Espaço destinado a uma breve apresentação do advogado responsável, sua trajetória e a
+            forma como conduz o atendimento aos clientes.
           </p>
-          <dl className="mt-10 divide-y divide-border border-y border-border">
-            {campos.map((c) => (
-              <div key={c.label} className="grid grid-cols-[8rem_minmax(0,1fr)] gap-4 py-4">
-                <dt className="eyebrow self-center">{c.label}</dt>
-                <dd className="text-foreground">{c.value}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
     </section>
