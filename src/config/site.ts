@@ -7,7 +7,7 @@ import fotoAdvogado from "@/assets/terno_azul_recorte.png";
 export const site = {
   nomeEscritorio: "Advocacia Trabalhista",
   advogado: {
-    nome: "[Nome do advogado — provisório]",
+    nome: "DR. Sérgio Egito",
     oab: "OAB/UF nº [000.000 — provisório]",
     formacao: "[Formação acadêmica — provisório]",
     experiencia: "[Experiência profissional — provisório]",
