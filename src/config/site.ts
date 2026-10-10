@@ -15,8 +15,8 @@ export const site = {
   },
   contato: {
     // Somente números, com DDI e DDD. Ex.: "5511999999999"
-    whatsapp: "",
-    telefone: "[(00) 0000-0000 — provisório]",
+    whatsapp: "5521987833246",
+    telefone: "(21) 98783-3246",
     email: "[contato@seudominio.com.br — provisório]",
     endereco: "[Endereço completo — provisório]",
     mensagemWhatsapp: "Olá! Gostaria de agendar um atendimento.",
