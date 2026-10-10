@@ -84,7 +84,7 @@ export function Sobre() {
           className={cn(
             "aspect-[4/5] overflow-hidden",
             a.fotoUrl
-              ? "border border-brand-foreground/25 bg-black"
+              ? "bg-background p-3 ring-1 ring-brand-foreground/25 md:p-5"
               : "flex items-center justify-center border border-dashed border-brand-foreground/40 bg-brand",
           )}
         >
