@@ -39,23 +39,24 @@
   /* Verde do escritório: #445B44 */
   --brand: oklch(0.449 0.047 145);
   --brand-foreground: oklch(1 0 0);
+  /* Bloco branco: fundo branco, letras verdes */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.26 0.03 145);
+  --foreground: oklch(0.449 0.047 145);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.26 0.03 145);
+  --card-foreground: oklch(0.449 0.047 145);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.26 0.03 145);
+  --popover-foreground: oklch(0.449 0.047 145);
   --primary: var(--brand);
   --primary-foreground: var(--brand-foreground);
   --secondary: oklch(0.94 0.025 145);
-  --secondary-foreground: oklch(0.3 0.035 145);
+  --secondary-foreground: oklch(0.36 0.05 145);
   --muted: oklch(0.96 0.015 145);
-  --muted-foreground: oklch(0.45 0.03 145);
+  --muted-foreground: oklch(0.45 0.045 145);
   --accent: oklch(0.94 0.025 145);
-  --accent-foreground: oklch(0.3 0.035 145);
+  --accent-foreground: oklch(0.36 0.05 145);
   --destructive: oklch(0.65 0.2 25);
   --destructive-foreground: oklch(0.97 0 0);
-  --border: oklch(0.449 0.047 145 / 18%);
+  --border: oklch(0.449 0.047 145 / 22%);
   --input: oklch(0.449 0.047 145 / 32%);
   --ring: oklch(0.449 0.047 145 / 55%);
 }
@@ -73,18 +74,25 @@
   section[id] { scroll-margin-top: 5rem; }
 }
 
-/* Faixa verde: inverte o texto para branco dentro do bloco */
+/* Bloco verde: fundo verde, letras brancas */
 @utility panel-green {
-  background-color: var(--color-brand);
+  background-color: var(--panel-bg, var(--color-brand));
   color: var(--color-brand-foreground);
   --foreground: var(--color-brand-foreground);
-  --muted-foreground: color-mix(in oklab, var(--color-brand-foreground) 78%, var(--color-brand));
-  --secondary: color-mix(in oklab, var(--color-brand-foreground) 12%, var(--color-brand));
-  --secondary-foreground: var(--color-brand-foreground);
-  --border: color-mix(in oklab, var(--color-brand-foreground) 26%, transparent);
+  --muted-foreground: color-mix(in oklab, var(--color-brand-foreground) 80%, var(--color-brand));
+  --secondary: var(--color-brand-foreground);
+  --secondary-foreground: var(--color-brand);
+  --accent: color-mix(in oklab, var(--color-brand-foreground) 14%, var(--color-brand));
+  --accent-foreground: var(--color-brand-foreground);
+  --border: color-mix(in oklab, var(--color-brand-foreground) 28%, transparent);
   --card: var(--color-brand);
-  --eyebrow-color: color-mix(in oklab, var(--color-brand-foreground) 82%, var(--color-brand));
-  --rule-color: color-mix(in oklab, var(--color-brand-foreground) 65%, var(--color-brand));
+  --eyebrow-color: color-mix(in oklab, var(--color-brand-foreground) 85%, var(--color-brand));
+  --rule-color: color-mix(in oklab, var(--color-brand-foreground) 70%, var(--color-brand));
+}
+
+/* Igual ao bloco verde, porém levemente translúcido (usado na barra do topo) */
+@utility panel-green-glass {
+  --panel-bg: color-mix(in oklab, var(--color-brand) 93%, transparent);
 }
 
 @utility eyebrow {
@@ -106,8 +114,8 @@
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border: 1px dashed color-mix(in oklab, var(--color-brand) 60%, transparent);
-  color: var(--color-brand);
+  border: 1px dashed color-mix(in oklab, currentColor 55%, transparent);
+  color: inherit;
   padding: 0.2rem 0.55rem;
 }
 

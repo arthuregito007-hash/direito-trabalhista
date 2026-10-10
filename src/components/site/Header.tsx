@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
+    <header className="panel-green panel-green-glass fixed inset-x-0 top-0 z-50 border-b border-border backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a href="#inicio" className="font-display text-xl tracking-wide text-foreground">
           {site.nomeEscritorio}
@@ -18,7 +18,7 @@ export function Header() {
               {l.label}
             </a>
           ))}
-          <a className={cn(buttonVariants({size: "sm"}), "rounded-sm")} href="#contato">Entre em contato</a>
+          <a className={cn(buttonVariants({variant: "secondary", size: "sm"}), "rounded-sm")} href="#contato">Entre em contato</a>
         </nav>
         <button
           className="md:hidden text-foreground"
@@ -30,7 +30,7 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <nav aria-label="Menu móvel" className="border-t border-border bg-background px-5 py-4 md:hidden">
+        <nav aria-label="Menu móvel" className="border-t border-border bg-brand px-5 py-4 md:hidden">
           <ul className="flex flex-col gap-4">
             {navLinks.map((l) => (
               <li key={l.id}>
@@ -40,7 +40,7 @@ export function Header() {
               </li>
             ))}
             <li>
-              <a className={cn(buttonVariants({}), "w-full rounded-sm")} href="#contato" onClick={() => setOpen(false)}>Entre em contato</a>
+              <a className={cn(buttonVariants({variant: "secondary"}), "w-full rounded-sm")} href="#contato" onClick={() => setOpen(false)}>Entre em contato</a>
             </li>
           </ul>
         </nav>
