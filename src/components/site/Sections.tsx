@@ -1,6 +1,7 @@
 import { Banknote, Clock, FileSignature, PiggyBank, ShieldAlert, Scale, Phone, Mail, MapPin, MessageCircle, User } from "lucide-react";
 import escritorio from "@/assets/escritorio.jpg";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { navLinks, site, whatsappLink } from "@/config/site";
 import { SectionHeading } from "./SectionHeading";
 
@@ -18,12 +19,8 @@ export function Hero() {
             defender seus direitos nas relações de trabalho.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button asChild size="lg" className="rounded-sm px-8">
-              <a href="#contato">Fale conosco</a>
-            </Button>
-            <Button asChild size="lg" variant="ghost" className="rounded-sm text-muted-foreground hover:text-foreground">
-              <a href="#atuacao">Áreas de atuação</a>
-            </Button>
+            <a className={cn(buttonVariants({size: "lg"}), "rounded-sm px-8")} href="#contato">Fale conosco</a>
+            <a className={cn(buttonVariants({variant: "ghost", size: "lg"}), "rounded-sm text-muted-foreground hover:text-foreground")} href="#atuacao">Áreas de atuação</a>
           </div>
         </div>
         <div className="relative animate-fade-up [animation-delay:200ms]">
@@ -158,11 +155,9 @@ export function Contato() {
             title="Fale conosco"
             intro="Entre em contato para agendar um atendimento. Responderemos assim que possível."
           />
-          <Button asChild size="lg" className="mt-10 rounded-sm px-8">
-            <a href={whatsappLink()} target={c.whatsapp ? "_blank" : undefined} rel="noopener noreferrer">
+          <a className={cn(buttonVariants({size: "lg"}), "mt-10 rounded-sm px-8")} href={whatsappLink()} target={c.whatsapp ? "_blank" : undefined} rel="noopener noreferrer">
               <MessageCircle aria-hidden /> Conversar pelo WhatsApp
             </a>
-          </Button>
         </div>
         <ul className="divide-y divide-border border-y border-border">
           {itens.map(({ icon: Icon, label, value }) => (

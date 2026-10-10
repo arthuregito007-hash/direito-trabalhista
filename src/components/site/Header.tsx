@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks, site } from "@/config/site";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -17,9 +18,7 @@ export function Header() {
               {l.label}
             </a>
           ))}
-          <Button asChild size="sm" className="rounded-sm">
-            <a href="#contato">Entre em contato</a>
-          </Button>
+          <a className={cn(buttonVariants({size: "sm"}), "rounded-sm")} href="#contato">Entre em contato</a>
         </nav>
         <button
           className="md:hidden text-foreground"
@@ -41,9 +40,7 @@ export function Header() {
               </li>
             ))}
             <li>
-              <Button asChild className="w-full rounded-sm">
-                <a href="#contato" onClick={() => setOpen(false)}>Entre em contato</a>
-              </Button>
+              <a className={cn(buttonVariants({}), "w-full rounded-sm")} href="#contato" onClick={() => setOpen(false)}>Entre em contato</a>
             </li>
           </ul>
         </nav>
