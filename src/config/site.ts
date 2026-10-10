@@ -1,3 +1,5 @@
+import fotoAdvogado from "@/assets/terno_azul.png.asset.json";
+
 /**
  * DADOS DO ESCRITÓRIO — edite aqui as informações reais.
  * Tudo marcado como "[provisório]" deve ser substituído antes da publicação.
@@ -9,7 +11,7 @@ export const site = {
     oab: "OAB/UF nº [000.000 — provisório]",
     formacao: "[Formação acadêmica — provisório]",
     experiencia: "[Experiência profissional — provisório]",
-    fotoUrl: "", // URL da foto profissional; vazio mostra um espaço reservado
+    fotoUrl: fotoAdvogado.url, // URL da foto profissional; vazio mostra um espaço reservado
   },
   contato: {
     // Somente números, com DDI e DDD. Ex.: "5511999999999"
