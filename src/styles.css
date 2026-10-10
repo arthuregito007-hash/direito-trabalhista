@@ -30,33 +30,34 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-gold: var(--gold);
-  --color-graphite: var(--graphite);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
 }
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(0.14 0.003 260);
-  --graphite: oklch(0.19 0.004 260);
-  --foreground: oklch(0.97 0.003 90);
-  --card: oklch(0.19 0.004 260);
-  --card-foreground: oklch(0.97 0.003 90);
-  --popover: oklch(0.19 0.004 260);
-  --popover-foreground: oklch(0.97 0.003 90);
-  --gold: oklch(0.76 0.09 80);
-  --primary: oklch(0.76 0.09 80);
-  --primary-foreground: oklch(0.15 0.005 260);
-  --secondary: oklch(0.24 0.004 260);
-  --secondary-foreground: oklch(0.97 0.003 90);
-  --muted: oklch(0.24 0.004 260);
-  --muted-foreground: oklch(0.75 0.006 260);
-  --accent: oklch(0.24 0.004 260);
-  --accent-foreground: oklch(0.97 0.003 90);
+  /* Verde do escritório: #445B44 */
+  --brand: oklch(0.449 0.047 145);
+  --brand-foreground: oklch(1 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.26 0.03 145);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.26 0.03 145);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.26 0.03 145);
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+  --secondary: oklch(0.94 0.025 145);
+  --secondary-foreground: oklch(0.3 0.035 145);
+  --muted: oklch(0.96 0.015 145);
+  --muted-foreground: oklch(0.45 0.03 145);
+  --accent: oklch(0.94 0.025 145);
+  --accent-foreground: oklch(0.3 0.035 145);
   --destructive: oklch(0.65 0.2 25);
   --destructive-foreground: oklch(0.97 0 0);
-  --border: oklch(1 0 0 / 9%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.76 0.09 80);
+  --border: oklch(0.449 0.047 145 / 18%);
+  --input: oklch(0.449 0.047 145 / 32%);
+  --ring: oklch(0.449 0.047 145 / 55%);
 }
 
 @layer base {
@@ -72,18 +73,32 @@
   section[id] { scroll-margin-top: 5rem; }
 }
 
+/* Faixa verde: inverte o texto para branco dentro do bloco */
+@utility panel-green {
+  background-color: var(--color-brand);
+  color: var(--color-brand-foreground);
+  --foreground: var(--color-brand-foreground);
+  --muted-foreground: color-mix(in oklab, var(--color-brand-foreground) 78%, var(--color-brand));
+  --secondary: color-mix(in oklab, var(--color-brand-foreground) 12%, var(--color-brand));
+  --secondary-foreground: var(--color-brand-foreground);
+  --border: color-mix(in oklab, var(--color-brand-foreground) 26%, transparent);
+  --card: var(--color-brand);
+  --eyebrow-color: color-mix(in oklab, var(--color-brand-foreground) 82%, var(--color-brand));
+  --rule-color: color-mix(in oklab, var(--color-brand-foreground) 65%, var(--color-brand));
+}
+
 @utility eyebrow {
   font-size: 0.72rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--eyebrow-color, var(--color-brand));
 }
 
-@utility gold-rule {
+@utility brand-rule {
   display: block;
   height: 1px;
   width: 3rem;
-  background: var(--color-gold);
+  background: var(--rule-color, var(--color-brand));
 }
 
 @utility placeholder-tag {
@@ -91,8 +106,8 @@
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border: 1px dashed color-mix(in oklab, var(--color-gold) 60%, transparent);
-  color: var(--color-gold);
+  border: 1px dashed color-mix(in oklab, var(--color-brand) 60%, transparent);
+  color: var(--color-brand);
   padding: 0.2rem 0.55rem;
 }
 
