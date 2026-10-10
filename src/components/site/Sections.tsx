@@ -84,7 +84,7 @@ export function Sobre() {
           className={cn(
             "aspect-[4/5] overflow-hidden",
             a.fotoUrl
-              ? "bg-background p-3 ring-1 ring-brand-foreground/25 md:p-5"
+              ? ""
               : "flex items-center justify-center border border-dashed border-brand-foreground/40 bg-brand",
           )}
         >
@@ -92,9 +92,9 @@ export function Sobre() {
             <img
               src={a.fotoUrl}
               alt={`Foto de ${a.nome}`}
-              width={864}
-              height={1184}
-              className="h-full w-full object-cover object-top"
+              width={650}
+              height={1114}
+              className="h-full w-full object-contain object-bottom"
               loading="lazy"
             />
           ) : (
