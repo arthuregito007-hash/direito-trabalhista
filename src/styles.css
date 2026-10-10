@@ -92,7 +92,7 @@
 
 /* Igual ao bloco verde, porém levemente translúcido (usado na barra do topo) */
 @utility panel-green-glass {
-  --panel-bg: color-mix(in oklab, var(--color-brand) 88%, transparent);
+  --panel-bg: color-mix(in oklab, var(--color-brand) 93%, transparent);
 }
 
 @utility eyebrow {
