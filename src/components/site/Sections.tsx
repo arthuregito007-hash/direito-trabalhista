@@ -1,9 +1,10 @@
-import { Banknote, Clock, FileSignature, PiggyBank, ShieldAlert, Scale, Phone, Mail, MapPin, MessageCircle, User } from "lucide-react";
+import { Banknote, Clock, FileSignature, PiggyBank, ShieldAlert, Scale, Phone, Mail, MessageCircle, User } from "lucide-react";
 import escritorio from "@/assets/escritorio.jpg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { navLinks, site, whatsappLink } from "@/config/site";
 import { SectionHeading } from "./SectionHeading";
+import { RevealText } from "./RevealText";
 
 export function Hero() {
   return (
@@ -12,7 +13,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <p className="eyebrow">Direito do Trabalho</p>
           <h1 className="mt-6 text-5xl leading-[1.05] text-foreground md:text-7xl">
-            Orientação juridica para direito no trabalho
+            <RevealText text="Orientação jurídica para direito no trabalho" />
           </h1>
           <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
             Atendimento atencioso e orientação jurídica clara para quem busca compreender e
@@ -72,11 +73,6 @@ export function Atuacao() {
 
 export function Sobre() {
   const a = site.advogado;
-  const campos = [
-    { label: "Formação", value: a.formacao },
-    { label: "Experiência", value: a.experiencia },
-    { label: "Inscrição", value: a.oab },
-  ];
   return (
     <section id="sobre" className="panel-green py-24">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[0.8fr_1.2fr] md:items-center">
@@ -106,20 +102,10 @@ export function Sobre() {
         </div>
         <div>
           <SectionHeading eyebrow="Sobre o advogado" title={a.nome} />
-          <span className="placeholder-tag mt-6">Texto provisório</span>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            [Texto provisório] Espaço destinado a uma breve apresentação do advogado responsável,
-            sua trajetória e a forma como conduz o atendimento aos clientes. Substitua este
-            parágrafo pelas informações reais.
+          <p className="mt-6 leading-relaxed text-muted-foreground">
+            Espaço destinado a uma breve apresentação do advogado responsável, sua trajetória e a
+            forma como conduz o atendimento aos clientes.
           </p>
-          <dl className="mt-10 divide-y divide-border border-y border-border">
-            {campos.map((c) => (
-              <div key={c.label} className="grid grid-cols-[8rem_minmax(0,1fr)] gap-4 py-4">
-                <dt className="eyebrow self-center">{c.label}</dt>
-                <dd className="text-foreground">{c.value}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
     </section>
@@ -158,7 +144,7 @@ export function Contato() {
     { icon: MessageCircle, label: "WhatsApp", value: c.whatsapp ? `+${c.whatsapp}` : "[Número de WhatsApp — provisório]" },
     { icon: Phone, label: "Telefone", value: c.telefone },
     { icon: Mail, label: "E-mail", value: c.email },
-    { icon: MapPin, label: "Endereço", value: c.endereco },
+
   ];
   return (
     <section id="contato" className="panel-green py-24">

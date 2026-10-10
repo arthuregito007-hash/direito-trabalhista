@@ -8,18 +8,17 @@ export const site = {
   nomeEscritorio: "Advocacia Trabalhista",
   advogado: {
     nome: "DR. Sérgio Egito",
-    oab: "OAB/UF nº [000.000 — provisório]",
+    oab: "OAB/RJ nº 201.123",
     formacao: "[Formação acadêmica — provisório]",
     experiencia: "[Experiência profissional — provisório]",
     fotoUrl: fotoAdvogado, // URL da foto profissional; vazio mostra um espaço reservado
   },
   contato: {
     // Somente números, com DDI e DDD. Ex.: "5511999999999"
-    whatsapp: "",
-    telefone: "[(00) 0000-0000 — provisório]",
-    email: "[contato@seudominio.com.br — provisório]",
-    endereco: "[Endereço completo — provisório]",
-    mensagemWhatsapp: "Olá! Gostaria de agendar um atendimento.",
+    whatsapp: "5521987833246",
+    telefone: "(21) 98783-3246",
+    email: "advocaciaegito@gmail.com",
+    mensagemWhatsapp: "Ola! gostaria de tirar uma duvida.",
   },
 };
 
