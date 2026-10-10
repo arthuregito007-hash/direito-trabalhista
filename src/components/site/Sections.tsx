@@ -177,7 +177,7 @@ export function Contato() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border py-2">
+    <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-display text-2xl text-foreground">{site.nomeEscritorio}</p>
