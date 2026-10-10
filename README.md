@@ -2,6 +2,8 @@
 
 Site institucional para apresentação de serviços jurídicos na área de Direito do Trabalho, com informações sobre a atuação profissional e canais de contato para pessoas que buscam orientação jurídica.
 
+🌐 **Acesse o site publicado:** [direito-trabalhista-five.vercel.app](https://direito-trabalhista-five.vercel.app/)
+
 ## Sobre o projeto
 
 O projeto foi desenvolvido para apresentar o escritório **Advocacia Trabalhista** em uma página moderna, clara e responsiva. O conteúdo inclui apresentação, áreas de atuação, informações sobre o profissional e opções de contato.
